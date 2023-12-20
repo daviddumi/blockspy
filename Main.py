@@ -3,7 +3,7 @@ from streamlit_option_menu import option_menu
 from data_engine import style_24h_change, get_token_data
 st.set_page_config(
     layout="wide",
-    page_icon="/Users/ouris/PycharmProjects/Blockspy/favicon.png"
+    page_icon="https://github.com/daviddumi/blockspy/blob/main/favicon.png"
 )
 
 selected = option_menu(
