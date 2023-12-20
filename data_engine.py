@@ -2,6 +2,7 @@ import pandas as pd
 import datetime
 from sqlalchemy import create_engine
 import streamlit as st
+import psycopg2
 
 
 def style_24h_change(val):
