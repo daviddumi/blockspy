@@ -53,8 +53,6 @@ if selected == "Home":
             I have also removed bot wallets like jaredfromsubway.eth, so the list of wallets is quite clean actually.
             
             I based the timeframe off of recent pumps, going from essentially 0 to 1, and I included the red days after an initial pump to include those who were waiting for a better entry. 
-            
-            You can see here on the $domi chart, the timeframe that I based wallet purchases off of. 
         """)
     st.markdown("""
             Once I had the list of wallets I then track all of their purchases and sells in the last day, and look at the tokens that were net purchased today by those wallets.
