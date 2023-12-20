@@ -56,7 +56,7 @@ if selected == "Home":
             
             You can see here on the $domi chart, the timeframe that I based wallet purchases off of. 
         """)
-    image_path = '/Users/ouris/PycharmProjects/Blockspy/example_chart.png'
+    image_path = 'https://github.com/daviddumi/blockspy/blob/main/example_chart.png'
     st.image(image_path, width=400, caption='Domi Purchase Timeframe')
     st.markdown("""
             Once I had the list of wallets I then track all of their purchases and sells in the last day, and look at the tokens that were net purchased today by those wallets.
