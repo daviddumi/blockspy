@@ -22,10 +22,10 @@ def get_token_data(token):
     engine = create_engine(f'postgresql://{db_username}:{db_password}@{db_host}:{db_port}/{db_name}')
 
     #set timezone to avoid errors of servers being in different timezones
-    timezone = pytz.timezone("UTC")
+    utc = pytz.utc
 
     #get current datetime, includes hour and minute
-    current_datetime = datetime.datetime.now()
+    current_datetime = datetime.datetime.now(utc)
 
     # format datetime to only have year month day
     formatted_datetime = current_datetime.strftime("%m-%d-%Y")
