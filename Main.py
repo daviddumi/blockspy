@@ -8,7 +8,7 @@ st.set_page_config(
 
 selected = option_menu(
             menu_title=None,  # required
-            options=["Home", "Shrap 🧠", "Prime 🧠", "Domi 🧠", "w3ULL 🧠", "About", "Donate"],  # required
+            options=["Home", "Shrap 🧠", "Prime 🧠", "Domi 🧠", "w3ULL 🧠", "sync 🧠","About", "Donate"],  # required
             icons=["house", "activity", "activity", "activity", "activity", "file-person", "wallet"],  # optional
             menu_icon="cast",  # optional
             default_index=0,  # optional
