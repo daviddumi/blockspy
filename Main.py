@@ -77,6 +77,10 @@ if selected == "w3ULL 🧠":
     st.title(f"{selected} tokens purchased in the last day")
     df = get_token_data("w3ull")
     st.dataframe(df, use_container_width=True, height=500)
+if selected == "sync 🧠":
+    st.title(f"{selected} tokens purchased in the last day")
+    df = get_token_data("sync")
+    st.dataframe(df, use_container_width=True, height=500)
 if selected == "About":
     st.title(f"{selected}")
     st.markdown("""
