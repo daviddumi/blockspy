@@ -3,6 +3,7 @@ import datetime
 from sqlalchemy import create_engine
 import streamlit as st
 import psycopg2
+import pytz
 
 
 def style_24h_change(val):
@@ -19,6 +20,9 @@ def get_token_data(token):
 
     #postgres connection engine created
     engine = create_engine(f'postgresql://{db_username}:{db_password}@{db_host}:{db_port}/{db_name}')
+
+    #set timezone to avoid errors of servers being in different timezones
+    timezone = pytz.timezone("UTC")
 
     #get current datetime, includes hour and minute
     current_datetime = datetime.datetime.now()
