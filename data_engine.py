@@ -27,9 +27,9 @@ def get_token_data(token):
     #get current datetime, includes hour and minute
     current_datetime = datetime.datetime.now(utc)
 
-    if current_datetime.hour < 13 or (current_datetime.hour == 13 and current_datetime.minute < 45):
     # Subtract one day from the current date if query has not run yet (dune queries run at 12-12:30 UTC and python script runs at 12:45 UTC)
-    current_datetime -= datetime.timedelta(days=1)
+    if current_datetime.hour < 13 or (current_datetime.hour == 13 and current_datetime.minute < 45):
+        current_datetime -= datetime.timedelta(days=1)
 
     # format datetime to only have year month day
     formatted_datetime = current_datetime.strftime("%m-%d-%Y")
