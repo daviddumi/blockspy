@@ -1,15 +1,15 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
-from data_engine import style_24h_change, get_token_data
+from data_engine import style_24h_change, get_token_buys, get_token_sells
 st.set_page_config(
     layout="wide",
-    page_icon="https://github.com/daviddumi/blockspy/blob/main/favicon.png"
+    page_icon="/Users/ouris/PycharmProjects/Blockspy/favicon.png"
 )
 
 selected = option_menu(
             menu_title=None,  # required
-            options=["Home", "Shrap 🧠", "Prime 🧠", "Domi 🧠", "w3ULL 🧠", "sync 🧠","About", "Donate"],  # required
-            icons=["house", "activity", "activity", "activity", "activity", "file-person", "wallet"],  # optional
+            options=["Home", "Shrap 🧠 Buys", "Shrap 🧠 Sells", "Prime 🧠 Buys", "Prime 🧠 Sells", "Domi 🧠 Buys", "Domi 🧠 Sells", "w3ULL 🧠 Buys", "w3ULL 🧠 Sells" ,"sync 🧠 Buys", "sync 🧠 Sells", "About", "Donate"],  # required
+            icons=["house", "activity", "activity", "activity", "activity", "activity", "activity", "activity", "activity", "activity", "activity", "file-person", "wallet"],  # optional
             menu_icon="cast",  # optional
             default_index=0,  # optional
             orientation="horizontal",
@@ -61,25 +61,49 @@ if selected == "Home":
             
             This runs daily and if you want it to run hourly please consider donating. Data isnt free.
      """)
-if selected == "Shrap 🧠":
-    st.title(f"{selected} tokens purchased in the last day")
-    df = get_token_data("shrap")
+if selected == "Shrap 🧠 Buys":
+    st.title(f"{selected}: tokens purchased in the last day")
+    df = get_token_buys("shrap")
     st.dataframe(df, use_container_width=True, height=500)
-if selected == "Prime 🧠":
-    st.title(f"{selected} tokens purchased in the last day")
-    df = get_token_data("prime")
+if selected == "Shrap 🧠 Sells":
+    st.title(f"{selected}: tokens sold in the last day")
+    df = get_token_sells("shrap")
     st.dataframe(df, use_container_width=True, height=500)
-if selected == "Domi 🧠":
-    st.title(f"{selected} tokens purchased in the last day")
-    df = get_token_data("domi")
+
+if selected == "Prime 🧠 Buys":
+    st.title(f"{selected}: tokens purchased in the last day")
+    df = get_token_buys("prime")
     st.dataframe(df, use_container_width=True, height=500)
-if selected == "w3ULL 🧠":
-    st.title(f"{selected} tokens purchased in the last day")
-    df = get_token_data("w3ull")
+if selected == "Prime 🧠 Sells":
+    st.title(f"{selected}: tokens sold in the last day")
+    df = get_token_sells("prime")
     st.dataframe(df, use_container_width=True, height=500)
-if selected == "sync 🧠":
-    st.title(f"{selected} tokens purchased in the last day")
-    df = get_token_data("sync")
+
+if selected == "Domi 🧠 Buys":
+    st.title(f"{selected}: tokens purchased in the last day")
+    df = get_token_buys("domi")
+    st.dataframe(df, use_container_width=True, height=500)
+if selected == "Domi 🧠 Sells":
+    st.title(f"{selected}: tokens sold in the last day")
+    df = get_token_sells("domi")
+    st.dataframe(df, use_container_width=True, height=500)
+
+if selected == "w3ULL 🧠 Buys":
+    st.title(f"{selected}: tokens purchased in the last day")
+    df = get_token_buys("w3ull")
+    st.dataframe(df, use_container_width=True, height=500)
+if selected == "w3ULL 🧠 Sells":
+    st.title(f"{selected}: tokens sold in the last day")
+    df = get_token_sells("w3ull")
+    st.dataframe(df, use_container_width=True, height=500)
+
+if selected == "Sync 🧠 Buys":
+    st.title(f"{selected}: tokens purchased in the last day")
+    df = get_token_buys("sync")
+    st.dataframe(df, use_container_width=True, height=500)
+if selected == "Sync 🧠 Sells":
+    st.title(f"{selected}: tokens sold in the last day")
+    df = get_token_sells("sync")
     st.dataframe(df, use_container_width=True, height=500)
 if selected == "About":
     st.title(f"{selected}")
