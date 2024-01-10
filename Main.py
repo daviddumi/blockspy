@@ -6,25 +6,25 @@ st.set_page_config(
     page_icon="/Users/ouris/PycharmProjects/Blockspy/favicon.png"
 )
 
-selected = option_menu(
-            menu_title=None,  # required
-            options=["Home", "Shrap 🧠 Buys", "Shrap 🧠 Sells", "Prime 🧠 Buys", "Prime 🧠 Sells", "Domi 🧠 Buys", "Domi 🧠 Sells", "w3ULL 🧠 Buys", "w3ULL 🧠 Sells" ,"sync 🧠 Buys", "sync 🧠 Sells", "About", "Donate"],  # required
-            icons=["house", "activity", "activity", "activity", "activity", "activity", "activity", "activity", "activity", "activity", "activity", "file-person", "wallet"],  # optional
-            menu_icon="cast",  # optional
-            default_index=0,  # optional
-            orientation="horizontal",
-            styles={
-                "container": {"padding": "0!important", "background-color": "#595959"},
-                "icon": {"color": "#00cc7a", "font-size": "25px"},
-                "nav-link": {
-                    "font-size": "25px",
-                    "text-align": "left",
-                    "margin": "0px",
-                    "--hover-color": "#eee",
+with st.sidebar:
+    selected = option_menu(
+                menu_title=None,  # required
+                options=["Home", "Shrap 🧠 Buys", "Shrap 🧠 Sells", "Prime 🧠 Buys", "Prime 🧠 Sells", "Domi 🧠 Buys", "Domi 🧠 Sells", "w3ULL 🧠 Buys", "w3ULL 🧠 Sells" ,"sync 🧠 Buys", "sync 🧠 Sells", "About", "Donate"],  # required
+                icons=["house", "activity", "activity", "activity", "activity", "activity", "file-person", "wallet"],  # optional
+                menu_icon="cast",  # optional
+                default_index=0,  # optional
+                styles={
+                    "container": {"padding": "0!important", "background-color": "#595959"},
+                    "icon": {"color": "#00cc7a", "font-size": "25px"},
+                    "nav-link": {
+                        "font-size": "25px",
+                        "text-align": "left",
+                        "margin": "0px",
+                        "--hover-color": "#eee",
+                    },
+                    "nav-link-selected": {"background-color": "#999999"},
                 },
-                "nav-link-selected": {"background-color": "#999999"},
-            },
-        )
+            )
 
 hide_st_style = """
             <style>
