@@ -9,7 +9,7 @@ st.set_page_config(
 with st.sidebar:
     selected = option_menu(
                 menu_title=None,  # required
-                options=["Home", "Shrap 🧠 Buys", "Shrap 🧠 Sells", "Prime 🧠 Buys", "Prime 🧠 Sells", "Domi 🧠 Buys", "Domi 🧠 Sells", "w3ULL 🧠 Buys", "w3ULL 🧠 Sells" ,"sync 🧠 Buys", "sync 🧠 Sells", "About", "Donate"],  # required
+                options=["Home", "Shrap 🧠 Buys", "Shrap 🧠 Sells", "Prime 🧠 Buys", "Prime 🧠 Sells", "Domi 🧠 Buys", "Domi 🧠 Sells", "w3ULL 🧠 Buys", "w3ULL 🧠 Sells" ,"Sync 🧠 Buys", "Sync 🧠 Sells", "About", "Donate"],  # required
                 icons=["house", "activity", "activity", "activity", "activity", "activity", "file-person", "wallet"],  # optional
                 menu_icon="cast",  # optional
                 default_index=0,  # optional
