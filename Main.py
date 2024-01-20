@@ -159,7 +159,7 @@ if selected == "About":
         
         That led me start learning how to code, and the rest is history. There should be a better version of this site soon!
         
-        You can find me @pellegrypto on twitter, or x whatever lol.
+        You can find me @blockspyai on twitter, or x whatever lol.
     """)
 if selected == "Donate":
     st.markdown("""
@@ -168,7 +168,7 @@ if selected == "Donate":
         
         BTC: 37R5GFVUSRd8HGM9nfV2bUfb89v2G6YDq9
         
-        ETH(EVM): 0x1D6e993028eC4FDDDe3171F1EC9251CC19c71Aec (mintaddict.eth)
+        ETH(EVM): 0xfE4Faf6ee1D1162A1Bd3Bc8d67AE3997c01e7a97 (mintaddict.eth)
         
         SOL: 9kuQiLazuPU92ctaBLGBb3eUqs3PKgfGbnubrgsGFwMK (mintaddict.sol)
     """)
