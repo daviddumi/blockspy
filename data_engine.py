@@ -101,3 +101,25 @@ def get_token_sells(token):
     styled_df = df.style.applymap(style_24h_change, subset=['24h Change'])
 
     return styled_df
+
+def get_dca(token, tf):
+    # Supabase credentials
+    db_username = 'postgres'
+    db_password = f'{keys.db_password}'
+    db_host = 'db.qvcvedpjrhiirkiuauxs.supabase.co'
+    db_port = '5432'
+    db_name = 'postgres'
+
+    #postgres connection engine created
+    engine = create_engine(f'postgresql://{db_username}:{db_password}@{db_host}:{db_port}/{db_name}')
+
+    # create dynamic table name that changes whenever you run this shit
+    table_name = f"LIVE-{token}_dca_in_{tf}"
+
+    #query for todays table
+    query = f'SELECT * FROM "{table_name}"'
+
+    #query supabase and write table to df
+    df = pd.read_sql(query, engine)
+
+    return df
