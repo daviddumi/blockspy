@@ -1,6 +1,6 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
-from data_engine import style_24h_change, get_token_buys, get_token_sells
+from data_engine import style_24h_change, get_token_buys, get_token_sells, get_dca
 st.set_page_config(
     layout="wide",
     page_icon="/Users/ouris/PycharmProjects/Blockspy/favicon.png"
@@ -9,8 +9,8 @@ st.set_page_config(
 with st.sidebar:
     selected = option_menu(
                 menu_title=None,  # required
-                options=["Home", "Shrap 🧠 Buys", "Shrap 🧠 Sells", "Prime 🧠 Buys", "Prime 🧠 Sells", "Domi 🧠 Buys", "Domi 🧠 Sells", "w3ULL 🧠 Buys", "w3ULL 🧠 Sells" ,"Sync 🧠 Buys", "Sync 🧠 Sells", "About", "Donate"],  # required
-                icons=["house", "activity", "activity", "activity", "activity", "activity", "activity", "activity", "activity", "activity", "activity", "file-person", "wallet"],  # optional
+                options=["Home", "Shrap 🧠", "Prime 🧠", "Domi 🧠", "w3ULL 🧠","Sync 🧠", "About", "Donate"],  # required
+                icons=["house", "activity", "activity", "activity", "activity", "activity", "file-person", "wallet"],  # optional
                 menu_icon="cast",  # optional
                 default_index=0,  # optional
                 styles={
@@ -61,50 +61,96 @@ if selected == "Home":
             
             This runs daily and if you want it to run hourly please consider donating. Data isnt free.
      """)
-if selected == "Shrap 🧠 Buys":
-    st.title(f"{selected}: tokens purchased in the last day")
-    df = get_token_buys("shrap")
-    st.dataframe(df, use_container_width=True, height=500)
-if selected == "Shrap 🧠 Sells":
-    st.title(f"{selected}: tokens sold in the last day")
-    df = get_token_sells("shrap")
-    st.dataframe(df, use_container_width=True, height=500)
+if selected == "Shrap 🧠":
+    st.title(f"{selected} Insiders")
+    w_dca = get_dca("shrap", "1w")
+    m_dca = get_dca("shrap", "1m")
+    buys = get_token_buys("shrap")
+    sells = get_token_sells("shrap")
+    st.header("DCAs last 4w")
+    st.dataframe(m_dca, use_container_width=True, height=500)
 
-if selected == "Prime 🧠 Buys":
-    st.title(f"{selected}: tokens purchased in the last day")
-    df = get_token_buys("prime")
-    st.dataframe(df, use_container_width=True, height=500)
-if selected == "Prime 🧠 Sells":
-    st.title(f"{selected}: tokens sold in the last day")
-    df = get_token_sells("prime")
-    st.dataframe(df, use_container_width=True, height=500)
+    st.header("DCAs last 7d")
+    st.dataframe(w_dca, use_container_width=True, height=500)
 
-if selected == "Domi 🧠 Buys":
-    st.title(f"{selected}: tokens purchased in the last day")
-    df = get_token_buys("domi")
-    st.dataframe(df, use_container_width=True, height=500)
-if selected == "Domi 🧠 Sells":
-    st.title(f"{selected}: tokens sold in the last day")
-    df = get_token_sells("domi")
-    st.dataframe(df, use_container_width=True, height=500)
+    st.title("Buys last 1d")
+    st.dataframe(buys, use_container_width=True, height=500)
 
-if selected == "w3ULL 🧠 Buys":
-    st.title(f"{selected}: tokens purchased in the last day")
-    df = get_token_buys("w3ull")
-    st.dataframe(df, use_container_width=True, height=500)
-if selected == "w3ULL 🧠 Sells":
-    st.title(f"{selected}: tokens sold in the last day")
-    df = get_token_sells("w3ull")
-    st.dataframe(df, use_container_width=True, height=500)
+    st.title("Sells last 1d")
+    st.dataframe(sells, use_container_width=True, height=500)
 
-if selected == "Sync 🧠 Buys":
-    st.title(f"{selected}: tokens purchased in the last day")
-    df = get_token_buys("sync")
-    st.dataframe(df, use_container_width=True, height=500)
-if selected == "Sync 🧠 Sells":
-    st.title(f"{selected}: tokens sold in the last day")
-    df = get_token_sells("sync")
-    st.dataframe(df, use_container_width=True, height=500)
+if selected == "Prime 🧠":
+    st.title(f"{selected} Insiders")
+    w_dca = get_dca("prime", "1w")
+    m_dca = get_dca("prime", "1m")
+    buys = get_token_buys("prime")
+    sells = get_token_sells("prime")
+    st.header("DCAs last 4w")
+    st.dataframe(m_dca, use_container_width=True, height=500)
+
+    st.header("DCAs last 7d")
+    st.dataframe(w_dca, use_container_width=True, height=500)
+
+    st.title("Buys last 1d")
+    st.dataframe(buys, use_container_width=True, height=500)
+
+    st.title("Sells last 1d")
+    st.dataframe(sells, use_container_width=True, height=500)
+
+if selected == "Domi 🧠":
+    st.title(f"{selected} Insiders")
+    w_dca = get_dca("domi", "1w")
+    m_dca = get_dca("domi", "1m")
+    buys = get_token_buys("domi")
+    sells = get_token_sells("domi")
+    st.header("DCAs last 4w")
+    st.dataframe(m_dca, use_container_width=True, height=500)
+
+    st.header("DCAs last 7d")
+    st.dataframe(w_dca, use_container_width=True, height=500)
+
+    st.title("Buys last 1d")
+    st.dataframe(buys, use_container_width=True, height=500)
+
+    st.title("Sells last 1d")
+    st.dataframe(sells, use_container_width=True, height=500)
+
+if selected == "w3ULL 🧠":
+    st.title(f"{selected} Insiders")
+    w_dca = get_dca("w3ull", "1w")
+    m_dca = get_dca("w3ull", "1m")
+    buys = get_token_buys("w3ull")
+    sells = get_token_sells("w3ull")
+    st.header("DCAs last 4w")
+    st.dataframe(m_dca, use_container_width=True, height=500)
+
+    st.header("DCAs last 7d")
+    st.dataframe(w_dca, use_container_width=True, height=500)
+
+    st.title("Buys last 1d")
+    st.dataframe(buys, use_container_width=True, height=500)
+
+    st.title("Sells last 1d")
+    st.dataframe(sells, use_container_width=True, height=500)
+
+if selected == "Sync 🧠":
+    st.title(f"{selected} Insiders")
+    w_dca = get_dca("sync", "1w")
+    m_dca = get_dca("sync", "1m")
+    buys = get_token_buys("sync")
+    sells = get_token_sells("sync")
+    st.header("DCAs last 4w")
+    st.dataframe(m_dca, use_container_width=True, height=500)
+
+    st.header("DCAs last 7d")
+    st.dataframe(w_dca, use_container_width=True, height=500)
+
+    st.title("Buys last 1d")
+    st.dataframe(buys, use_container_width=True, height=500)
+
+    st.title("Sells last 1d")
+    st.dataframe(sells, use_container_width=True, height=500)
+
 if selected == "About":
     st.title(f"{selected}")
     st.markdown("""
