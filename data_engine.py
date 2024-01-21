@@ -105,7 +105,7 @@ def get_token_sells(token):
 def get_dca(token, tf):
     # Supabase credentials
     db_username = 'postgres'
-    db_password = f'{keys.db_password}'
+    db_password = '8!sUTV*cCo^6'
     db_host = 'db.qvcvedpjrhiirkiuauxs.supabase.co'
     db_port = '5432'
     db_name = 'postgres'
