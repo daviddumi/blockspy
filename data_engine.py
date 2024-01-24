@@ -102,7 +102,7 @@ def get_token_sells(token):
 
     return styled_df
 
-def get_dca(token, tf):
+def get_dca(token, tf, direction):
     # Supabase credentials
     db_username = 'postgres'
     db_password = '8!sUTV*cCo^6'
@@ -114,7 +114,7 @@ def get_dca(token, tf):
     engine = create_engine(f'postgresql://{db_username}:{db_password}@{db_host}:{db_port}/{db_name}')
 
     # create dynamic table name that changes whenever you run this shit
-    table_name = f"LIVE-{token}_dca_in_{tf}"
+    table_name = f"LIVE-{token}_dca_{direction}_{tf}"
 
     #query for todays table
     query = f'SELECT * FROM "{table_name}"'
