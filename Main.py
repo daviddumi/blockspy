@@ -63,15 +63,23 @@ if selected == "Home":
      """)
 if selected == "Shrap 🧠":
     st.title(f"{selected} Insiders")
-    w_dca = get_dca("shrap", "1w")
-    m_dca = get_dca("shrap", "1m")
+    w_dca_in = get_dca("shrap", "1w", "in")
+    m_dca_in = get_dca("shrap", "1m", "in")
+    m_dca_out = get_dca("shrap", "1m", "out")
+    m_dca_out = get_dca("shrap", "1m", "out")
     buys = get_token_buys("shrap")
     sells = get_token_sells("shrap")
-    st.header("DCAs last 4w")
-    st.dataframe(m_dca, use_container_width=True, height=500)
+    st.header("DCAs in last 4w")
+    st.dataframe(m_dca_in, use_container_width=True, height=500)
 
-    st.header("DCAs last 7d")
-    st.dataframe(w_dca, use_container_width=True, height=500)
+    st.header("DCAs out last 4w")
+    st.dataframe(m_dca_out, use_container_width=True, height=500)
+
+    st.header("DCAs in last 7d")
+    st.dataframe(w_dca_in, use_container_width=True, height=500)
+
+    st.header("DCAs out last 7d")
+    st.dataframe(m_dca_out, use_container_width=True, height=500)
 
     st.title("Buys last 1d")
     st.dataframe(buys, use_container_width=True, height=500)
@@ -81,15 +89,23 @@ if selected == "Shrap 🧠":
 
 if selected == "Prime 🧠":
     st.title(f"{selected} Insiders")
-    w_dca = get_dca("prime", "1w")
-    m_dca = get_dca("prime", "1m")
+    w_dca_in = get_dca("prime", "1w", "in")
+    m_dca_in = get_dca("prime", "1m", "in")
+    m_dca_out = get_dca("prime", "1m", "out")
+    m_dca_out = get_dca("prime", "1m", "out")
     buys = get_token_buys("prime")
     sells = get_token_sells("prime")
-    st.header("DCAs last 4w")
-    st.dataframe(m_dca, use_container_width=True, height=500)
+    st.header("DCAs in last 4w")
+    st.dataframe(m_dca_in, use_container_width=True, height=500)
 
-    st.header("DCAs last 7d")
-    st.dataframe(w_dca, use_container_width=True, height=500)
+    st.header("DCAs out last 4w")
+    st.dataframe(m_dca_out, use_container_width=True, height=500)
+
+    st.header("DCAs in last 7d")
+    st.dataframe(w_dca_in, use_container_width=True, height=500)
+
+    st.header("DCAs out last 7d")
+    st.dataframe(m_dca_out, use_container_width=True, height=500)
 
     st.title("Buys last 1d")
     st.dataframe(buys, use_container_width=True, height=500)
@@ -99,15 +115,23 @@ if selected == "Prime 🧠":
 
 if selected == "Domi 🧠":
     st.title(f"{selected} Insiders")
-    w_dca = get_dca("domi", "1w")
-    m_dca = get_dca("domi", "1m")
+    w_dca_in = get_dca("domi", "1w", "in")
+    m_dca_in = get_dca("domi", "1m", "in")
+    m_dca_out = get_dca("domi", "1m", "out")
+    m_dca_out = get_dca("domi", "1m", "out")
     buys = get_token_buys("domi")
     sells = get_token_sells("domi")
-    st.header("DCAs last 4w")
-    st.dataframe(m_dca, use_container_width=True, height=500)
+    st.header("DCAs in last 4w")
+    st.dataframe(m_dca_in, use_container_width=True, height=500)
 
-    st.header("DCAs last 7d")
-    st.dataframe(w_dca, use_container_width=True, height=500)
+    st.header("DCAs out last 4w")
+    st.dataframe(m_dca_out, use_container_width=True, height=500)
+
+    st.header("DCAs in last 7d")
+    st.dataframe(w_dca_in, use_container_width=True, height=500)
+
+    st.header("DCAs out last 7d")
+    st.dataframe(m_dca_out, use_container_width=True, height=500)
 
     st.title("Buys last 1d")
     st.dataframe(buys, use_container_width=True, height=500)
@@ -117,15 +141,23 @@ if selected == "Domi 🧠":
 
 if selected == "w3ULL 🧠":
     st.title(f"{selected} Insiders")
-    w_dca = get_dca("w3ull", "1w")
-    m_dca = get_dca("w3ull", "1m")
+    w_dca_in = get_dca("w3ull", "1w", "in")
+    m_dca_in = get_dca("w3ull", "1m", "in")
+    m_dca_out = get_dca("w3ull", "1m", "out")
+    m_dca_out = get_dca("w3ull", "1m", "out")
     buys = get_token_buys("w3ull")
     sells = get_token_sells("w3ull")
-    st.header("DCAs last 4w")
-    st.dataframe(m_dca, use_container_width=True, height=500)
+    st.header("DCAs in last 4w")
+    st.dataframe(m_dca_in, use_container_width=True, height=500)
 
-    st.header("DCAs last 7d")
-    st.dataframe(w_dca, use_container_width=True, height=500)
+    st.header("DCAs out last 4w")
+    st.dataframe(m_dca_out, use_container_width=True, height=500)
+
+    st.header("DCAs in last 7d")
+    st.dataframe(w_dca_in, use_container_width=True, height=500)
+
+    st.header("DCAs out last 7d")
+    st.dataframe(m_dca_out, use_container_width=True, height=500)
 
     st.title("Buys last 1d")
     st.dataframe(buys, use_container_width=True, height=500)
@@ -135,15 +167,23 @@ if selected == "w3ULL 🧠":
 
 if selected == "Sync 🧠":
     st.title(f"{selected} Insiders")
-    w_dca = get_dca("sync", "1w")
-    m_dca = get_dca("sync", "1m")
+    w_dca_in = get_dca("sync", "1w", "in")
+    m_dca_in = get_dca("sync", "1m", "in")
+    m_dca_out = get_dca("sync", "1m", "out")
+    m_dca_out = get_dca("sync", "1m", "out")
     buys = get_token_buys("sync")
     sells = get_token_sells("sync")
-    st.header("DCAs last 4w")
-    st.dataframe(m_dca, use_container_width=True, height=500)
+    st.header("DCAs in last 4w")
+    st.dataframe(m_dca_in, use_container_width=True, height=500)
 
-    st.header("DCAs last 7d")
-    st.dataframe(w_dca, use_container_width=True, height=500)
+    st.header("DCAs out last 4w")
+    st.dataframe(m_dca_out, use_container_width=True, height=500)
+
+    st.header("DCAs in last 7d")
+    st.dataframe(w_dca_in, use_container_width=True, height=500)
+
+    st.header("DCAs out last 7d")
+    st.dataframe(m_dca_out, use_container_width=True, height=500)
 
     st.title("Buys last 1d")
     st.dataframe(buys, use_container_width=True, height=500)
