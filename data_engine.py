@@ -12,9 +12,9 @@ def style_24h_change(val):
 
 def get_token_buys(token):
     # Supabase credentials
-    db_username = 'postgres'
+    db_username = 'postgres.qvcvedpjrhiirkiuauxs'
     db_password = '8!sUTV*cCo^6'
-    db_host = 'db.qvcvedpjrhiirkiuauxs.supabase.co'
+    db_host = 'aws-0-us-west-1.pooler.supabase.com'
     db_port = '5432'
     db_name = 'postgres'
 
@@ -58,9 +58,9 @@ def get_token_buys(token):
 
 def get_token_sells(token):
     # Supabase credentials
-    db_username = 'postgres'
+    db_username = 'postgres.qvcvedpjrhiirkiuauxs'
     db_password = '8!sUTV*cCo^6'
-    db_host = 'db.qvcvedpjrhiirkiuauxs.supabase.co'
+    db_host = 'aws-0-us-west-1.pooler.supabase.com'
     db_port = '5432'
     db_name = 'postgres'
 
@@ -104,9 +104,9 @@ def get_token_sells(token):
 
 def get_dca(token, tf, direction):
     # Supabase credentials
-    db_username = 'postgres'
+    db_username = 'postgres.qvcvedpjrhiirkiuauxs'
     db_password = '8!sUTV*cCo^6'
-    db_host = 'db.qvcvedpjrhiirkiuauxs.supabase.co'
+    db_host = 'aws-0-us-west-1.pooler.supabase.com'
     db_port = '5432'
     db_name = 'postgres'
 
